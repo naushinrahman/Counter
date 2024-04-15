@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "daisyui": "^4.10.1",
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.12",
+    "express": "^4.19.2"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "tw:build": "tailwindcss build -i ./public/tailwind.css -o ./public/main.css"
+  },
+  "name": "daisy",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
