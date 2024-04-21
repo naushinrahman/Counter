@@ -6,3 +6,4 @@ def count():
     global counter
     counter+=1
     return counter
+
