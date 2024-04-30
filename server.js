@@ -14,11 +14,12 @@ app.get('/', (req, res) => {
 const { spawn } = require('child_process');
 
 app.get('/python-data', (req, res) => {
-    const pythonProcess = spawn('python', ['path/to/your/python_script.py']);
+    const pythonProcess = spawn('python', ['/python/counter.py']);
 
     pythonProcess.stdout.on('data', (data) => {
-        console.log(`Python script output: ${data}`);
-        res.send(data); // Send the output of the Python script as response
+        const counterValue = parseInt(data.toString()); // Parse the counter value from the Python script output
+        console.log(`Counter value received from Python script: ${counterValue}`);
+        res.send(`Counter value: ${counterValue}`); // Send the counter value as response
     });
 
     pythonProcess.stderr.on('data', (data) => {
