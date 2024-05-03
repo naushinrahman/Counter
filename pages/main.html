@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="author" content="Naushin Rahman"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home page</title>
-        <link rel="stylesheet" type="text/css" href="/main.css" />
     </head>
     <body>
         <header>
@@ -21,5 +20,32 @@
         <button class="btn btn-accent">Accent</button>
         <button class="btn btn-ghost">Ghost</button>
         <button class="btn btn-link">Link</button>
+    </body>
+    </html> -->
+    
+    <!-- public/index.html -->
+    
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="/main.css" />
+        <title>Page Visits Counter</title>
+    </head>
+    <body>
+        <h1>Loading...</h1>
+        <button>daisy?</button>
+        <script>
+            fetch('/')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.body.innerHTML = '<h1>Error loading counter value.</h1>';
+                });
+        </script>
     </body>
 </html>
